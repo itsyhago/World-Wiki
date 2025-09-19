@@ -31,9 +31,6 @@ html, body{
     transition: 0.5s;
 }
 
-.top:hover{
-    transform: scale(1.2) ;
-}
 .top a{
     width: 100%;
     height: 100%;

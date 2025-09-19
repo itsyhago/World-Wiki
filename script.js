@@ -17,7 +17,6 @@ if (localStorage.getItem("position")) {
 window.addEventListener("scroll", () => {
     guideTitle.forEach((div, i) =>{
         let positionsInv = Array.from(guideTitle).map(el => el.offsetTop);
-        console.log(positionsInv)
         const nextDiv = guideTitle[i + 1]
         if (window.scrollY >= position[i] && (!nextDiv || window.scrollY < position[i + 1] - 100 )){
             div.classList.add("grudada")
