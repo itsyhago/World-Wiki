@@ -39,12 +39,11 @@ window.addEventListener("scroll", () => {
         }
     })
 
-    window.requestAnimationFrame(() => {
-        if (window.scrollY >= 1000){
-            topBtn.classList.add("aparecer")
-        }else{
-            topBtn.classList.remove("aparecer")
-        }
-    })
+    if (window.scrollY >= 1000){
+        topBtn.classList.add("aparecer")
+    }else{
+        topBtn.classList.remove("aparecer")
+    }
+
     
 })
