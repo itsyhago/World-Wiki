@@ -1,0 +1,207 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+
+h1{
+    font-size: 30px;
+    margin: 40px 0px;
+}
+
+.pesquisar{
+    display: flex;
+    align-items: center;
+    
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 3px;
+    padding: 10px;
+}
+.pesquisar i{
+    margin-right: 10px;
+}
+
+.pesquisar input{
+    border: none;
+    
+}
+.pesquisar input:focus{
+    outline: none;
+}
+
+.msg{
+    display: none;
+    color: red;
+    margin-top: 40px;
+}
+
+iframe{
+    width: 1350px;
+    height: 100%;
+    background-color: transparent;
+ 
+
+}
+#iframe{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    height: 50vw;
+    background-color: transparent;
+}
+.line{
+    width: 85%;
+    margin-top: 40px;
+}
+.line hr{
+    width: 100%;
+    border-radius: 30px;
+    background-color: red;
+}
+
+.continentes{
+    display: grid;
+    column-gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    min-width: 700px;
+    grid-template-columns: repeat(5, 1fr);
+}
+.continentes .card{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    align-items: center;
+}
+.card a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.432);
+    transition: 0.3s;
+    
+}
+.card a:hover{
+    transform: scale(1.1);
+}  
+.card h2{
+    font-size: 18px;
+}
+.card span{
+    font-size: 15px;
+} 
+#oceania a{
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    transition: 0.5s;
+}
+#oceania a:hover{
+    border: 2px solid #16a084;
+}
+#europa a{
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    transition: 0.5s;
+}
+#europa a:hover{
+    border: 2px solid #2980B9;
+}
+#asia a{
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    transition: 0.5s;
+}
+#asia a:hover{
+    border: 2px solid #F1C40F;
+}
+#america a{
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    transition: 0.5s;
+}
+
+#america a:hover{
+    border: 2px solid #C0392B;
+}
+#africa a{
+    border: 2px solid rgba(0, 0, 0, 0.363);
+    transition: 0.5s;
+}
+#africa a:hover{
+    border: 2px solid #D35400;
+}
+
+.guideTitle{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    height: 70px;
+    top: 0;
+    margin: 60px 0px 20px 0px;
+    padding-left: 5px;
+    background-color: white;
+    transition: 0.5s;
+}
+.grudada{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.541);
+    padding-left: 15px;
+    max-width: 910px;
+    
+}
+.invisivel{
+    opacity: 0%;
+}
+.guideTitle .titleImg{
+    margin-right: 10px;
+}
+
+h3{
+    font-size: 25px;
+
+}
+.guideTb{
+    width: 100%;
+    max-width: 900px;
+    padding: 5px;
+    border-collapse: collapse;
+    border-radius: 5px;
+
+}
+.guideTb th{
+    text-align: start;
+    color: rgba(0, 0, 0, 0.877);
+    
+}
+
+tr.paises{
+    height: 60px;
+}
+tr.paises td{
+    border-top: 1px solid rgba(0, 0, 0, 0.411) ;
+
+}
+.guideTb td:nth-child(1){
+    width: 100px;
+}
+tr.paises img{
+    width: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.651);
+}
+.guideTb td:nth-child(3){
+    width: 200px;
+}
+
+td div{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+

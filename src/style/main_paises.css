@@ -1,0 +1,75 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+}
+h1{
+    font-size: 40px;
+    margin: 40px 20px;
+    text-align: center;
+}
+
+p{
+    max-width: 900px;
+    text-align: justify;
+    text-indent: 40px;
+
+}
+p img{
+    float: right;
+    width: 300px;
+    height: fit-content;
+    margin: 0px 0px -5px 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.808);
+  
+   
+}
+hr{
+    width: 100%;
+    max-width: 900px;
+    margin-top: 40px;
+}
+h2{
+    width: 100%;
+    max-width: 900px;
+    margin: 40px 0px 20px 0px;
+
+}
+
+.imgs{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.imgs .card{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.479);
+}
+.imgs .card:first-of-type{
+    margin-right: 30px;
+}
+
+.imgs .semMargem {
+    margin: 0px !important; 
+} 
+
+.card div{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.imgs img{
+    height: 225px;
+    
+}
+

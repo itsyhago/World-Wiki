@@ -1,0 +1,108 @@
+/* index.html */
+@media screen and (max-width: 900px){
+    .continentes{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        min-width: 500px;
+        max-width: 500px;
+    }
+
+}
+
+@media screen and (max-width: 876px){
+    .imgs{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgs .card:first-of-type{
+        margin: 0px 0px 20px 0px;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+   #iframe{
+        display: none;
+   }
+
+   .msg{
+    display: block;
+   }
+    
+}
+@media screen and (max-width: 600px){
+    ul.navegar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+        tr td:last-of-type{
+        display: none;
+    }
+    tr th:last-of-type{
+        display: none;
+    }
+
+    .guideTb td:nth-child(3){
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .continentes{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 10px;
+       min-width: 0px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .card img{
+        width: 100%;
+    }
+
+    .card div{
+        height: fit-content;
+    }
+    .card img{
+        margin-bottom: 5px;
+    }
+
+    p {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    p img{
+        margin-top: 10px;
+    }
+    header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 0px 40px 0px 50px;
+    }
+    .footerC{
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes{
+        display: flex;
+       justify-content: center;
+    }
+
+    
+}
+
+
+
+
+

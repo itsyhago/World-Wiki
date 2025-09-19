@@ -1,0 +1,147 @@
+/* Header */
+ 
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 55px;
+    padding: 0px 40px 0px 100px;
+    background-color: #f7f5f5;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.404);
+    z-index: 10;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+nav a{
+    font-size: 15px;
+    font-weight: 400;
+}
+a.logo{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+ul.navegar{
+    margin-right: -30px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+ul.navegar li{
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+.navegar a#guide{
+    margin-left: 10px;
+}
+ul.navegar li a{
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+ul.navegar li a::after{
+    content: ' ';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: scalex(0);
+    transition: 0.3s;
+}
+
+.navegar li a:hover{
+    display: inline-block;
+    color: #2C7A7B;
+    font-size: 17px;
+    transform: translate(-2px, 0px);
+}
+.navegar li a:hover::after{
+    background-color: #2C7A7B;
+    transform: scalex(1);
+}
+
+.menu{
+    display: none;
+}
+.menu i{
+    font-size: 20px;
+    transition: .5s ;
+}
+.menu i:hover{
+    
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateX(4px);
+    color: #2C7A7B; ;
+}
+
+.ulMenu{
+    max-height: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.692);
+    transform: translateY(-300px);
+    transition: 0.5s;
+}
+
+.ulMenu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.322) ;
+    border-top: 1px solid rgba(0, 0, 0, 0.692);
+   
+}
+
+.aparecer{
+    transform: translateY(0px);
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+
+
+/* Footer */
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: #f7f5f5;
+    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.486);
+    padding: 15px;
+    font-size: 15px;
+}
+
+footer .footerC{
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+}
+footer .redes{
+    width: 35%;
+    display: flex;
+    
+}
+
+.redes a{
+    width: 20px;
+    margin-right: 15px;
+    transition: .5s;
+}
+.redes a:hover{
+    font-size: 20px;
+    transform: translate(-3px,-2px);
+}
