@@ -15,13 +15,6 @@ if (localStorage.getItem("position")) {
   localStorage.setItem("position", JSON.stringify(position));
 }
 
-window.addEventListener("resize", () =>{ 
-    setInterval(() => {
-        window.location.reload(true);
-        localStorage.removeItem("position");
-    }, 1000)
-})
-
 window.addEventListener("scroll", () => {
     guideTitle.forEach((div, i) =>{
         let positionsInv = Array.from(guideTitle).map(el => el.offsetTop);
