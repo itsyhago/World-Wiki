@@ -47,3 +47,7 @@ window.addEventListener("scroll", () => {
 
     
 })
+
+topBtn.addEventListener("click",()=>{
+    topBtn.blur()
+})
