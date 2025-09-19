@@ -14,7 +14,6 @@ if (localStorage.getItem("position")) {
   position = Array.from(guideTitle).map(el => el.offsetTop);
   localStorage.setItem("position", JSON.stringify(position));
 }
-
 window.addEventListener("scroll", () => {
     guideTitle.forEach((div, i) =>{
         let positionsInv = Array.from(guideTitle).map(el => el.offsetTop);
@@ -39,9 +38,13 @@ window.addEventListener("scroll", () => {
             }                
         }
     })
-    if (window.scrollY >= 1000){
-        topBtn.classList.add("aparecer")
-    }else{
-        topBtn.classList.remove("aparecer")
-    }
+
+    window.requestAnimationFrame(() => {
+        if (window.scrollY >= 1000){
+            topBtn.classList.add("aparecer")
+        }else{
+            topBtn.classList.remove("aparecer")
+        }
+    })
+    
 })

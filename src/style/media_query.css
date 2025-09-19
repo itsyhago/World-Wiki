@@ -98,6 +98,9 @@
         display: flex;
        justify-content: center;
     }
+    .footerC span{
+        margin-top: 5px;
+    }
 
     
 }
