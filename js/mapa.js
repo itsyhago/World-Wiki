@@ -53,8 +53,7 @@ var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
     polygonSeries.mapPolygons.template.events.on("click", function(ev) {
        const data = ev.target.dataItem.dataContext;
         const name =  am5geodata_lang_PT[data.id] || data.name;
-        const base = window.location.pathname.replace(/\/[^\/]*$/, "");
-        window.open(`${base}/pages/${removeAccent(name).toLowerCase().replaceAll(" ", "")}.html`, "_self") 
+        window.open(`../pages/${removeAccent(name).toLowerCase().replaceAll(" ", "")}.html`, "_self") 
     });
     polygonSeries.mapPolygons.template.setAll({
     tooltipText: "{name}",
