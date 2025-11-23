@@ -108,7 +108,11 @@ document.addEventListener("keydown", function(event){
         if(dataListLower.includes(inputfield.value.toLowerCase()) ){
             window.open(`pages/${removeAccent(inputfield.value).toLowerCase().replaceAll(" ", "")}.html`, "_self")
             inputfield.classList.remove("error")
+            inputfield.placeholder = "pesquise"
             inputfield.value = ""
+            container.innerHTML = ""
+            container.style.display = "none"
+                
         }else{
            inputfield.classList.add("error")
            inputfield.placeholder = "Não reconhecido"
