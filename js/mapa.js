@@ -53,7 +53,7 @@ var polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
     polygonSeries.mapPolygons.template.events.on("click", function(ev) {
         var data = ev.target.dataItem.dataContext;
         var name =  am5geodata_lang_PT[data.id] || data.name;
-        window.open(`pages/${removeAccent(name).toLowerCase().replaceAll(" ", "")}.html`, "_self") 
+        window.open(`World-Wiki/pages/${removeAccent(name).toLowerCase().replaceAll(" ", "")}.html`, "_self") 
     });
     polygonSeries.mapPolygons.template.setAll({
     tooltipText: "{name}",
