@@ -6,14 +6,14 @@ const ulMenu = document.querySelector(".ulMenu")  /* hamburger menu */
 const inputfield =  document.querySelector("input")  /* Input */
 const container =  document.querySelector(".suggestionsContainer")   /* suggestionsContainer */
 const dataList = [
-"Africa do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Benim", "Botsuana", "Burkina Fasso", "Burundi", "Cabo Verde"
+"Africa do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Argélia", "Argentina",, "Austrália", "Benim", "Botsuana",  "Brasil", "Burkina Fasso", "Burundi", "Cabo Verde"
 
 ]
 const dataListLower = dataList.map(item => item.toLowerCase())
 
 let position  = Array.from(guideTitle).map(el => el.offsetTop);/* list of guide title positions */
 let timer /* timer when resizing the page */
-
+let lastWidth = window.innerWidth;
 
 function removeAccent(str){
          return str
@@ -24,18 +24,28 @@ document.querySelector(".menu").addEventListener("click", ()=>{
     ulMenu.classList.toggle("aparecer")
     setTimeout(() =>{
         position = Array.from(guideTitle).map(el => el.offsetTop);
-        localStorage.setItem("position", JSON.stringify(position));
     }, 500)
     
 })
 
-
 window.addEventListener('resize', () =>{
     clearTimeout(timer)
-    timer = setTimeout(() => {
-        localStorage.removeItem("position")
-        location.href = "index.html"
-    }, 250)
+    const currentWidth = window.innerWidth
+    if (currentWidth != lastWidth){
+        lastWidth = currentWidth
+        timer = setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+            if (windowscrollY === 0){
+                position = Array.from(guideTitle).map(el => el.offsetTop);
+            }
+    
+        }, 250)
+    }
+    
 })
 window.addEventListener("scroll", () => {
     guideTitle.forEach((div, i) =>{
@@ -106,7 +116,7 @@ document.addEventListener("keydown", function(event){
     const key = event.key
     if(document.activeElement === inputfield && key == "Enter"){
         if(dataListLower.includes(inputfield.value.toLowerCase()) ){
-            window.open(`pages/${removeAccent(inputfield.value).toLowerCase().replaceAll(" ", "-")}.html`, "_self")
+            location.href = `pages/${removeAccent(inputfield.value).toLowerCase().replaceAll(" ", "-")}.html`
             inputfield.classList.remove("error")
             inputfield.placeholder = "pesquise"
             inputfield.value = ""
