@@ -6,7 +6,7 @@ const ulMenu = document.querySelector(".ulMenu")  /* hamburger menu */
 const inputfield =  document.querySelector("input")  /* Input */
 const container =  document.querySelector(".suggestionsContainer")   /* suggestionsContainer */
 const dataList = [
-"Africa do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Argélia", "Argentina",, "Austrália", "Benim", "Botsuana",  "Brasil", "Burkina Faso", "Burundi", "Cabo Verde"
+"Africa do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Argélia", "Argentina",, "Austrália", "Benim", "Botsuana",  "Brasil", "Burquina faso", "Burundi", "Cabo Verde", "Canadá", "República dos Camarões" 
 
 ]
 const dataListLower = dataList.map(item => item.toLowerCase())
