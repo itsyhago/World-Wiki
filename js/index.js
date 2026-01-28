@@ -39,7 +39,7 @@ window.addEventListener('resize', () =>{
                 left: 0,
                 behavior: 'smooth'
             })
-            if (windowscrollY === 0){
+            if (window.scrollY === 0){
                 position = Array.from(guideTitle).map(el => el.offsetTop);
             }
     
