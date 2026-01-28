@@ -1,3 +1,6 @@
+const topBtn = document.getElementById("topBtn")  /* back to top button */
+const ulMenu = document.querySelector(".ulMenu")  /* hamburger menu */
+const guideTitle = document.querySelectorAll(".guideTitle")  /* List of divs with the names of the continents. */
 const urlParams = new URLSearchParams(window.location.search)
 const paisId = urlParams.get("id")
 fetch("./dados.json")
@@ -33,3 +36,62 @@ fetch("./dados.json")
         document.getElementById("img6-name").textContent = info.img6_name
     })
 
+window.addEventListener('resize', () =>{
+    clearTimeout(timer)
+    const currentWidth = window.innerWidth
+    if (currentWidth != lastWidth){
+        lastWidth = currentWidth
+        timer = setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+            if (window.scrollY === 0){
+                position = Array.from(guideTitle).map(el => el.offsetTop);
+            }
+    
+        }, 250)
+    }
+    
+})
+window.addEventListener("scroll", () => {
+    guideTitle.forEach((div, i) =>{
+        let positionsInv = Array.from(guideTitle).map(el => el.offsetTop);
+        const nextDiv = guideTitle[i + 1]
+        if (window.scrollY >= position[i] && (!nextDiv || window.scrollY < position[i + 1]  - 100)){
+            div.classList.add("grudada")
+        }else{
+            div.classList.remove("grudada")
+           
+        }
+        if(positionsInv[i] >= positionsInv[i + 1]){
+            div.classList.add("invisivel")
+        }else{
+            div.classList.remove("invisivel")
+        }
+        console.log(window.scrollY)
+        console.log(position)
+        if ((window.innerHeight + window.scrollY + 3 >= document.body.offsetHeight) && !nextDiv) {
+            if( window.scrollY >= position[i]){
+                div.classList.add("invisivel") 
+            }                
+        }
+    })
+
+    if (window.scrollY >= 1000){
+        topBtn.classList.add("aparecer")
+    }else{
+        topBtn.classList.remove("aparecer")
+    }
+
+    
+})
+
+document.querySelector(".menu").addEventListener("click", ()=>{
+    ulMenu.classList.toggle("aparecer")
+    setTimeout(() =>{
+        position = Array.from(guideTitle).map(el => el.offsetTop);
+    }, 500)
+    
+})

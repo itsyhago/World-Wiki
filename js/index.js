@@ -2,7 +2,8 @@ history.scrollRestoration = "manual";
 
 const guideTitle = document.querySelectorAll(".guideTitle")  /* List of divs with the names of the continents. */
 const topBtn = document.getElementById("topBtn")  /* back to top button */
-const ulMenu = document.querySelector(".ulMenu")  /* hamburger menu */
+const menu = document.querySelector(".menu")
+const ulMenu = document.querySelector(".ulMenu")  /* lista do menu hamburguer */
 const inputfield =  document.querySelector("input")  /* Input */
 const container =  document.querySelector(".suggestionsContainer")   /* suggestionsContainer */
 const dataList = [
@@ -20,7 +21,7 @@ function removeAccent(str){
                     .normalize("NFD")
                     .replace(/[\u0300-\u036f]/g, "")
 }
-document.querySelector(".menu").addEventListener("click", ()=>{
+menu.addEventListener("click", ()=>{
     ulMenu.classList.toggle("aparecer")
     setTimeout(() =>{
         position = Array.from(guideTitle).map(el => el.offsetTop);
@@ -62,8 +63,7 @@ window.addEventListener("scroll", () => {
         }else{
             div.classList.remove("invisivel")
         }
-        console.log(window.scrollY)
-        console.log(position)
+
         if ((window.innerHeight + window.scrollY + 3 >= document.body.offsetHeight) && !nextDiv) {
             if( window.scrollY >= position[i]){
                 div.classList.add("invisivel") 
