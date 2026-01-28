@@ -6,7 +6,7 @@ const ulMenu = document.querySelector(".ulMenu")  /* hamburger menu */
 const inputfield =  document.querySelector("input")  /* Input */
 const container =  document.querySelector(".suggestionsContainer")   /* suggestionsContainer */
 const dataList = [
-"Africa do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Argélia", "Argentina",, "Austrália", "Benim", "Botsuana",  "Brasil", "Burquina faso", "Burundi", "Cabo Verde", "Canadá", "República dos Camarões" 
+"África do Sul", "Angola", "Anguilla", "Antígua e Barbuda", "Argélia", "Argentina",, "Austrália", "Benim", "Botsuana",  "Brasil", "Burquina faso", "Burundi", "Cabo Verde", "Canadá", "República dos Camarões" 
 
 ]
 const dataListLower = dataList.map(item => item.toLowerCase())
@@ -116,7 +116,7 @@ document.addEventListener("keydown", function(event){
     const key = event.key
     if(document.activeElement === inputfield && key == "Enter"){
         if(dataListLower.includes(inputfield.value.toLowerCase()) ){
-            location.href = `pages/${removeAccent(inputfield.value).toLowerCase().replaceAll(" ", "_")}.html`
+            location.href = `paises.html?id=${removeAccent(inputfield.value).toLowerCase().replaceAll(" ", "-")}`
             inputfield.classList.remove("error")
             inputfield.placeholder = "pesquise"
             inputfield.value = ""
