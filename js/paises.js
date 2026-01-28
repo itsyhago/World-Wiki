@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search)
 const paisId = urlParams.get("id")
-fetch("../dados.json")
+fetch("dados.json")
     .then(response => response.json())
     .then(dados => {
         const info = dados[paisId]
